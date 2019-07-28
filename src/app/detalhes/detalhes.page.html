@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>detalhes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngIf="filme">
+      <ion-card-header>
+        <img [src]="'https://image.tmdb.org/t/p/w300/' + filme.backdrop_path">
+        <br>
+        <ion-card-subtitle>{{ filme.release_date }}</ion-card-subtitle>
+        <ion-card-title>{{ filme.original_title }}</ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <p>{{ filme.overview }}</p>
+      </ion-card-content>
+      <button ion-button block (click)="abrirDetalhes()">Detalhes</button>
+    </ion-card>
+  </ion-content>
